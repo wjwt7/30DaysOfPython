@@ -33,3 +33,13 @@ print(type('Wilson'))  # String
 print(type('Truong'))  # String
 print(type('Canada'))  # String
 
+#Level 3
+my_int = 25
+my_float = 25.0
+my_complex = 1 + 2j
+my_string = 'Hello, World!'
+my_bool = True
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (1, 2, 3, 4, 5)
+my_set = {1, 2, 3, 4, 5}
+my_dict = {'name': 'Wilson', 'age': 30, 'country': 'Canada'}
