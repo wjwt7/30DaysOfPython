@@ -45,8 +45,7 @@ my_set = {1, 2, 3, 4, 5}
 my_dict = {'name': 'Wilson', 'age': 30, 'country': 'Canada'}
 
 #Euclidean distance between two points (2, 3) and (10, 8)
-import math
 point1 = (2, 3)
 point2 = (10, 8)
-distance = math.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2)
+distance = ((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2) ** 0.5
 print('Euclidean distance between points (2, 3) and (10, 8):', distance)
