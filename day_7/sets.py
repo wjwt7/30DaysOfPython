@@ -32,3 +32,28 @@ print(A.symmetric_difference(B))
 #7
 del A
 del B
+
+#Exercise level 3
+#1
+age_set = set(age)
+length_age_set = len(age_set)
+length_age = len(age)
+if length_age_set == length_age:
+    print("The lengths are equal")
+elif length_age_set > length_age:
+    print("The length of the set is greater than the length of the list")
+else:
+    print("The length of the list is greater than the length of the set")
+#2
+#Explanation of the difference between data types
+'''
+String: sequence of characters used to represent text
+List: ordered collection of items that can be of different data types
+Tuple: ordered collection of items that can be of different data types, but is immutable
+Set: unordered collection of unique items
+'''
+#3
+sentence = "I am a teacher and I love to inspire and teach people"
+words = sentence.split()
+unique_words = set(words)
+print(unique_words)
