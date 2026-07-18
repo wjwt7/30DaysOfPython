@@ -14,3 +14,21 @@ it_companies.update(['LinkedIn', 'Snapchat', 'TikTok'])
 it_companies.remove('IBM')
 #5
 #difference between remove and discard is that remove will raise an error if the item does not exist in the set, while discard will not raise an error
+
+#Exercise level 2
+#1
+print(A.union(B))
+#2
+print(A.intersection(B))
+#3
+print(A.issubset(B))
+#4
+print(A.isdisjoint(B))
+#5
+print(A.union(B))
+print(B.union(A))
+#6
+print(A.symmetric_difference(B))
+#7
+del A
+del B
