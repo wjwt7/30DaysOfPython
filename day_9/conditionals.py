@@ -32,4 +32,37 @@ if number_one > number_two:
 else:
     print(f"{number_one} is smaller than {number_two}.")
 
+#Exercise level 2
+#1
+score = int(input("Enter your score: "))
+if score >= 90:
+    print("Your grade is A.")
+elif score >= 80:
+    print("Your grade is B.")
+elif score >= 70:
+    print("Your grade is C.")
+elif score >= 60:
+    print("Your grade is D.")
+else:
+    print("Your grade is F.")
+
+#2
+month = input("Enter the month: ").lower()
+if month in ["september", "october", "november"]:
+    print("The season is Autumn.")
+elif month in ["december", "january", "february"]:
+    print("The season is Winter.")
+elif month in ["march", "april", "may"]:
+    print("The season is Spring.")
+else:
+    print("The season is Summer.")
+
+#3
+fruits = ["banana", "orange", "mango", "lemon"]
+new_fruit = input("Enter a fruit: ").lower()
+if new_fruit in fruits:
+    print("That fruit already exists in the list.")
+else:
+    fruits.append(new_fruit)
+    print(fruits)
 
