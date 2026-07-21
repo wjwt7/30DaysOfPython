@@ -66,3 +66,31 @@ else:
     fruits.append(new_fruit)
     print(fruits)
 
+#Exercise level 3
+#1
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_married': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+if 'skills' in person:
+    middle_skill = person['skills'][len(person['skills']) // 2]
+    print(f"The middle skill is: {middle_skill}")
+    if 'Python' in person['skills']:
+        print("The person has Python skill.")
+    if set(skill.lower() for skill in person['skills']) == {'javascript', 'react'}:
+        print('He is a front end developer.')
+    if set(skill.lower() for skill in person['skills']) == {'node', 'python', 'mongodb'}:
+        print('He is a backend developer.')
+    if set(skill.lower() for skill in person['skills']) == {'react', 'node', 'mongodb'}:
+        print('He is a fullstack developer.')
+    else:
+        print('Unknown title.')
+
