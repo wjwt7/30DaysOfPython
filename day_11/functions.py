@@ -91,3 +91,73 @@ def sum_of_evens(num):
         if i % 2 == 0:
             even_sum += i
     return even_sum
+
+#Exercise level 2
+#1
+def evens_and_odds(num):
+    even_count = 0
+    odd_count = 0
+    for i in range(num + 1):
+        if i % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    return even_count, odd_count
+#2
+def factorial(num):
+    if num < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+    result = 1
+    for i in range(1, num + 1):
+        result *= i
+    return result
+#3
+def is_empty(param):
+    return len(param) == 0
+#4
+def calculate_mean(*args):
+    total_sum = 0
+    count = 0
+    for num in args:
+        if isinstance(num, (int, float)):
+            total_sum += num
+            count += 1
+    if count == 0:
+        raise ValueError("At least one number is required to calculate the mean.")
+    return total_sum / count
+def calculate_median(*args):
+    sorted_args = sorted(args)
+    n = len(sorted_args)
+    if n == 0:
+        raise ValueError("At least one number is required to calculate the median.")
+    mid = n // 2
+    if n % 2 == 0:
+        return (sorted_args[mid - 1] + sorted_args[mid]) / 2
+    else:
+        return sorted_args[mid]
+def calculate_mode(*args):
+    frequency = {}
+    for num in args:
+        if isinstance(num, (int, float)):
+            frequency[num] = frequency.get(num, 0) + 1
+    max_freq = max(frequency.values(), default=0)
+    modes = [num for num, freq in frequency.items() if freq == max_freq]
+    return modes
+def calculate_range(*args):
+    if not args:
+        raise ValueError("At least one number is required to calculate the range.")
+    return max(args) - min(args)
+def calculate_variance(*args):
+    mean = calculate_mean(*args)
+    variance = sum((num - mean) ** 2 for num in args) / len(args)
+    return variance
+def calculate_std(*args):
+    variance = calculate_variance(*args)
+    return variance ** 0.5
+#5
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+#6
+def show_args(**args):
+    formatted_args = ', '.join(f"{key}: {value}" for key, value in args.items())
+    print(f"Received: {formatted_args}")
