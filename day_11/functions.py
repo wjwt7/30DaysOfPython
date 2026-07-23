@@ -161,3 +161,29 @@ def greet(name="Guest"):
 def show_args(**args):
     formatted_args = ', '.join(f"{key}: {value}" for key, value in args.items())
     print(f"Received: {formatted_args}")
+
+#Exercise level 3
+#1
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+#2
+def all_unique(lst):
+    return len(lst) == len(set(lst))
+#3
+def all_same_type(lst):
+    first_type = type(lst[0])
+    for item in lst:
+        if type(item) != first_type:
+            return False
+    return True
+#4
+def is_valid_variable_name(name):
+    import keyword
+    return (isinstance(name, str) and name.isidentifier() and not keyword.iskeyword(name))
+
+        
