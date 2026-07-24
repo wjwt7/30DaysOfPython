@@ -44,3 +44,13 @@ def generate_colors(color_type, num_colors):
     else:
         raise ValueError("Invalid color type. Choose 'hexa' or 'rgb'.")
 
+#Exercise level 3
+#1
+def shuffle_list(lst):
+    shuffled = lst[:]
+    random.shuffle(shuffled)
+    return shuffled
+#2
+def seven_unique_random_numbers():
+    return random.sample(range(0, 10), 7)
+
